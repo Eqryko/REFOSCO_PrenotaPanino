@@ -6,6 +6,7 @@ $data = $_SESSION["data"];
 $tempo = $_SESSION["tempo"];
 $pane = $_SESSION["pane"];
 $proteina = $_SESSION["proteina"];
+$verdura = $_SESSION["verdura"];
 $salse = $_SESSION["salse"];
 $aggiunte = $_SESSION["aggiunte"];
 $prezzo = $_SESSION["prezzo"];
@@ -18,7 +19,7 @@ $fp = fopen("scontrino.txt", "a");
 fwrite($fp, "=====================\n");
 fwrite($fp, "Scontrino - $oggi\n");
 fwrite($fp, "Cliente: $nome\n");
-fwrite($fp, "Pane: $pane | Proteina: $proteina\n");
+fwrite($fp, "Pane: $pane | Proteina: $proteina | Verdura: $verdura \n");
 fwrite($fp, "Salse: " . implode(", ", $salse) . "\n");
 fwrite($fp, "Aggiunte: " . implode(", ", $aggiunte) . "\n");
 fwrite($fp, "Totale: " . number_format($prezzo, 2) . " €\n");
@@ -58,6 +59,7 @@ fclose($fp);
             <tr><td>Nome</td><td><?= $nome ?></td></tr>
             <tr><td>Pane</td><td><?= $pane ?></td></tr>
             <tr><td>Proteina</td><td><?= $proteina ?></td></tr>
+            <tr><td>Verdura</td><td><?= $verdura ?></td></tr>
             <tr><td>Salse</td><td><?= implode(", ", $salse) ?></td></tr>
             <tr><td>Aggiunte</td><td><?= implode(", ", $aggiunte) ?></td></tr>
             <tr><td><b>Totale</b></td><td><b><?= number_format($prezzo, 2) ?> €</b></td></tr>

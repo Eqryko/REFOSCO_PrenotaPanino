@@ -8,6 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $tempo = htmlspecialchars($_POST["tempo"]);
     $pane = htmlspecialchars($_POST["pane"]);
     $proteina = htmlspecialchars($_POST["proteina"]);
+    $verdura = htmlspecialchars($_POST["verdura"]);
     $salse = isset($_POST["salsa"]) ? $_POST["salsa"] : [];
     $aggiunte = isset($_POST["agg"]) ? $_POST["agg"] : [];
     $haFidelity = isset($_POST["haFidelity"]); // true se selezionato
@@ -21,6 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $_SESSION["tempo"] = $tempo;
     $_SESSION["pane"] = $pane;
     $_SESSION["proteina"] = $proteina;
+    $_SESSION["verdura"] = $verdura;
     $_SESSION["salse"] = $salse;
     $_SESSION["aggiunte"] = $aggiunte;
     $_SESSION["prezzo"] = $prezzo;

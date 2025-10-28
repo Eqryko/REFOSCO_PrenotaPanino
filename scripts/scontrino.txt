@@ -35,3 +35,71 @@ Aggiunte: Cips
 Totale: 10.20 €
 =====================
 
+=====================
+Scontrino - 28/10/2025 12:21:40
+Cliente: Refosco Enrico
+Pane: rot-13 | Proteina: lattuga
+Salse: 
+Aggiunte: 
+Totale: 8.00 €
+=====================
+
+=====================
+Scontrino - 28/10/2025 12:32:54
+Cliente: Refosco Enrico
+Pane: rot-13 | Proteina: lattuga | Verdura:  
+Salse: 
+Aggiunte: 
+Totale: 6.40 €
+(Sconto Fidelity applicato)
+=====================
+
+=====================
+Scontrino - 28/10/2025 12:33:34
+Cliente: Refosco Enrico
+Pane: rot-13 | Proteina: lattuga | Verdura:  
+Salse: 
+Aggiunte: 
+Totale: 6.40 €
+(Sconto Fidelity applicato)
+=====================
+
+=====================
+Scontrino - 28/10/2025 12:34:05
+Cliente: Refosco Enrico
+Pane: rot-13 | Proteina: lattuga | Verdura:  
+Salse: 
+Aggiunte: 
+Totale: 6.40 €
+(Sconto Fidelity applicato)
+=====================
+
+=====================
+Scontrino - 28/10/2025 12:34:34
+Cliente: Refosco Enrico
+Pane: rot-13 | Proteina: lattuga | Verdura:  
+Salse: Salsa
+Aggiunte: Vigenere
+Totale: 7.36 €
+(Sconto Fidelity applicato)
+=====================
+
+=====================
+Scontrino - 28/10/2025 12:34:52
+Cliente: Refosco Enrico
+Pane: rot-13 | Proteina: lattuga | Verdura:  
+Salse: Salsa
+Aggiunte: Vigenere
+Totale: 7.36 €
+(Sconto Fidelity applicato)
+=====================
+
+=====================
+Scontrino - 28/10/2025 12:36:05
+Cliente: Enrico
+Pane: rot-13 | Proteina: carne | Verdura: lattuga 
+Salse: Salsa
+Aggiunte: Vigenere
+Totale: 9.20 €
+=====================
+
