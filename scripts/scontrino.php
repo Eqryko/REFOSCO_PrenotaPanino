@@ -1,68 +1,72 @@
 <?php
 session_start();
 
-if (!isset($_SESSION["ordine"])) {
-    die("<h2>Errore: nessun ordine trovato.</h2>");
-}
+$nome = $_SESSION["nome"];
+$data = $_SESSION["data"];
+$tempo = $_SESSION["tempo"];
+$pane = $_SESSION["pane"];
+$proteina = $_SESSION["proteina"];
+$salse = $_SESSION["salse"];
+$aggiunte = $_SESSION["aggiunte"];
+$prezzo = $_SESSION["prezzo"];
+$fidelity = isset($_SESSION["fidelity_ok"]) && $_SESSION["fidelity_ok"];
 
-$ordine = $_SESSION["ordine"];
-$prezzo_base = 8.00;
+$oggi = date("d/m/Y H:i:s");
 
-// Lettura file codici validi
-$codici_validi = file("codici.txt", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-$codice_inserito = trim($_POST["codice"]);
-$sconto = 0;
-
-// Verifica codice fidelity
-if (in_array($codice_inserito, $codici_validi)) {
-    $sconto = 0.20; // 20% di sconto
-    $esito = "Codice Fidelity valido! Hai ottenuto uno sconto del 20%.";
-} else {
-    $esito = "Codice Fidelity non valido o assente.";
-}
-
-// Calcolo prezzo finale
-$totale = $prezzo_base - ($prezzo_base * $sconto);
-$data_ordine = date("d/m/Y H:i:s");
-
-// --- Scrittura su file (scontrino.txt)
-$file = fopen("scontrino.txt", "a");
-fwrite($file, "----- Nuovo Ordine -----\n");
-foreach ($ordine as $chiave => $valore) {
-    fwrite($file, ucfirst($chiave) . ": $valore\n");
-}
-fwrite($file, "Prezzo finale: €" . number_format($totale, 2) . "\n");
-fwrite($file, "Data ordine: $data_ordine\n");
-fwrite($file, "-------------------------\n\n");
-fclose($file);
+// Scrittura su file “scontrino.txt”
+$fp = fopen("scontrino.txt", "a");
+fwrite($fp, "=====================\n");
+fwrite($fp, "Scontrino - $oggi\n");
+fwrite($fp, "Cliente: $nome\n");
+fwrite($fp, "Pane: $pane | Proteina: $proteina\n");
+fwrite($fp, "Salse: " . implode(", ", $salse) . "\n");
+fwrite($fp, "Aggiunte: " . implode(", ", $aggiunte) . "\n");
+fwrite($fp, "Totale: " . number_format($prezzo, 2) . " €\n");
+if ($fidelity) fwrite($fp, "(Sconto Fidelity applicato)\n");
+fwrite($fp, "=====================\n\n");
+fclose($fp);
 ?>
 
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Conferma Ordine</title>
+    <title>Scontrino</title>
     <link rel="stylesheet" href="general.css">
 </head>
 <body>
+    <div class="lava-bg">
+        <div class="lava-blob"></div>
+        <div class="lava-blob"></div>
+        <div class="lava-blob"></div>
+        <div class="lava-blob"></div>
+        <div class="lava-blob"></div>
+    </div>
+    <img class="logo" src="../media/greenmantis.png">
+    <header class="Nav">
+        <a href="https://www.itisrossi.edu.it/" target="_blank">ITIS Rossi</a>
+        <a href="https://github.com/Eqryko" target="_blank"> GitHub Profile</a>
+        <a href="https://github.com/Eqryko/REFOSCO_PrenotaPanino" target="_blank"> GitHub Project </a>
+    </header>
     <div class="Main">
-        <h1>Ordine Confermato</h1>
-        <p><?= $esito ?></p>
-        <p><b>Data ordine:</b> <?= $data_ordine ?></p>
-        <p><b>Data richiesta consegna:</b> <?= htmlspecialchars($ordine["data"]) ?> alle <?= htmlspecialchars($ordine["ora"]) ?></p>
-
-        <table border="1" cellpadding="10" style="margin:auto; background-color:#000000aa; color:white;">
+        <h1>Ordine Confermato ✅</h1>
+        <p><b>Data dell'ordine:</b> <?= $oggi ?></p>
+        <p><b>Consegna richiesta:</b> <?= "$data $tempo" ?></p>
+        <h2>Riepilogo Panino</h2>
+        <table border="1" align="center" cellpadding="8">
             <tr><th>Campo</th><th>Valore</th></tr>
-            <?php foreach ($ordine as $k => $v): ?>
-                <tr>
-                    <td><?= ucfirst($k) ?></td>
-                    <td><?= htmlspecialchars($v) ?></td>
-                </tr>
-            <?php endforeach; ?>
-            <tr><td><b>Prezzo finale</b></td><td><b>€<?= number_format($totale, 2) ?></b></td></tr>
+            <tr><td>Nome</td><td><?= $nome ?></td></tr>
+            <tr><td>Pane</td><td><?= $pane ?></td></tr>
+            <tr><td>Proteina</td><td><?= $proteina ?></td></tr>
+            <tr><td>Salse</td><td><?= implode(", ", $salse) ?></td></tr>
+            <tr><td>Aggiunte</td><td><?= implode(", ", $aggiunte) ?></td></tr>
+            <tr><td><b>Totale</b></td><td><b><?= number_format($prezzo, 2) ?> €</b></td></tr>
         </table>
-
-        <p><i>Scontrino salvato su file server.</i></p>
+        <?php if ($fidelity): ?>
+            <p style="color:lime;">Sconto Fidelity del 20% applicato</p>
+        <?php else: ?>
+            <p style="color:red;">Nessuno sconto applicato</p>
+        <?php endif; ?>
     </div>
 </body>
 </html>
