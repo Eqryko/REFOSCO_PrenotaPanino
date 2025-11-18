@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+// === DATI DELL'ORDINE ===
 $nome = $_SESSION["nome"];
 $data = $_SESSION["data"];
 $tempo = $_SESSION["tempo"];
@@ -14,7 +15,7 @@ $fidelity = isset($_SESSION["fidelity_ok"]) && $_SESSION["fidelity_ok"];
 
 $oggi = date("d/m/Y H:i:s");
 
-// Scrittura su file “scontrino.txt”
+// === SCRITTURA SCONTRINO ===
 $fp = fopen("scontrino.txt", "a");
 fwrite($fp, "=====================\n");
 fwrite($fp, "Scontrino - $oggi\n");
@@ -26,6 +27,37 @@ fwrite($fp, "Totale: " . number_format($prezzo, 2) . " €\n");
 if ($fidelity) fwrite($fp, "(Sconto Fidelity applicato)\n");
 fwrite($fp, "=====================\n\n");
 fclose($fp);
+
+
+// === CONTATORE DI VISUALIZZAZIONI BASATO SU COOKIE ===
+if (isset($_COOKIE["visualizzazioni"])) {
+    $count = (int)$_COOKIE["visualizzazioni"] + 1;
+} else {
+    $count = 1; // prima visita
+}
+
+// aggiorna il cookie (dura 1 anno)
+setcookie("visualizzazioni", $count, time() + (365 * 24 * 60 * 60), "/");
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+// Seleziona il database
+if (!$conn->select_db("militari2punto0")) {
+    die("Impossibile selezionare il database: " . $conn->error);
+}
+
+echo "Database selezionato correttamente!";
+
 ?>
 
 <!DOCTYPE html>
@@ -69,6 +101,9 @@ fclose($fp);
         <?php else: ?>
             <p style="color:red;">Nessuno sconto applicato</p>
         <?php endif; ?>
+
+
+        <p>Visualizzazioni: </p><?= $count ?>
     </div>
 </body>
 </html>

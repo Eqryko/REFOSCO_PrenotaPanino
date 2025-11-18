@@ -103,3 +103,166 @@ Aggiunte: Vigenere
 Totale: 9.20 €
 =====================
 
+=====================
+Scontrino - 04/11/2025 12:00:05
+Cliente: 
+Pane:  | Proteina:  | Verdura:  
+=====================
+Scontrino - 04/11/2025 12:00:20
+Cliente: 
+Pane:  | Proteina:  | Verdura:  
+=====================
+Scontrino - 04/11/2025 12:00:23
+Cliente: 
+Pane:  | Proteina:  | Verdura:  
+=====================
+Scontrino - 04/11/2025 12:00:49
+Cliente: Refosco Enrico
+Pane: rot-13 | Proteina: carne | Verdura: lattuga 
+Salse: ChaCha, Gnutella
+Aggiunte: Rsa, Cyber
+Totale: 8.32 €
+(Sconto Fidelity applicato)
+=====================
+
+=====================
+Scontrino - 04/11/2025 12:50:48
+Cliente: Refosco Enrico
+Pane: rot-13 | Proteina: carne | Verdura: lattuga 
+Salse: ChaCha, Gnutella
+Aggiunte: Rsa, Cyber
+Totale: 8.32 €
+(Sconto Fidelity applicato)
+=====================
+
+=====================
+Scontrino - 04/11/2025 12:52:08
+Cliente: Refosco Enrico
+Pane: rot-13 | Proteina: carne | Verdura: lattuga 
+Salse: ChaCha, Gnutella
+Aggiunte: Rsa, Cyber
+Totale: 8.32 €
+(Sconto Fidelity applicato)
+=====================
+
+=====================
+Scontrino - 04/11/2025 12:52:10
+Cliente: Refosco Enrico
+Pane: rot-13 | Proteina: carne | Verdura: lattuga 
+Salse: ChaCha, Gnutella
+Aggiunte: Rsa, Cyber
+Totale: 8.32 €
+(Sconto Fidelity applicato)
+=====================
+
+=====================
+Scontrino - 04/11/2025 12:52:11
+Cliente: Refosco Enrico
+Pane: rot-13 | Proteina: carne | Verdura: lattuga 
+Salse: ChaCha, Gnutella
+Aggiunte: Rsa, Cyber
+Totale: 8.32 €
+(Sconto Fidelity applicato)
+=====================
+
+=====================
+Scontrino - 04/11/2025 12:52:20
+Cliente: Refosco Enrico
+Pane: rot-13 | Proteina: carne | Verdura: lattuga 
+Salse: ChaCha, Gnutella
+Aggiunte: Rsa, Cyber
+Totale: 8.32 €
+(Sconto Fidelity applicato)
+=====================
+
+=====================
+Scontrino - 04/11/2025 12:52:37
+Cliente: Refosco Enrico
+Pane: rot-13 | Proteina: carne | Verdura: lattuga 
+Salse: ChaCha, Gnutella
+Aggiunte: Rsa, Cyber
+Totale: 8.32 €
+(Sconto Fidelity applicato)
+=====================
+
+=====================
+Scontrino - 04/11/2025 12:52:38
+Cliente: Refosco Enrico
+Pane: rot-13 | Proteina: carne | Verdura: lattuga 
+Salse: ChaCha, Gnutella
+Aggiunte: Rsa, Cyber
+Totale: 8.32 €
+(Sconto Fidelity applicato)
+=====================
+
+=====================
+Scontrino - 04/11/2025 12:53:34
+Cliente: Refosco Enrico
+Pane: rot-13 | Proteina: carne | Verdura: lattuga 
+Salse: ChaCha, Gnutella
+Aggiunte: Rsa, Cyber
+Totale: 8.32 €
+(Sconto Fidelity applicato)
+=====================
+
+=====================
+Scontrino - 04/11/2025 13:26:53
+Cliente: Refosco Enrico
+Pane: rot-13 | Proteina: carne | Verdura: lattuga 
+Salse: ChaCha, Gnutella
+Aggiunte: Rsa, Cyber
+Totale: 8.32 €
+(Sconto Fidelity applicato)
+=====================
+
+=====================
+Scontrino - 04/11/2025 13:26:55
+Cliente: Refosco Enrico
+Pane: rot-13 | Proteina: carne | Verdura: lattuga 
+Salse: ChaCha, Gnutella
+Aggiunte: Rsa, Cyber
+Totale: 8.32 €
+(Sconto Fidelity applicato)
+=====================
+
+=====================
+Scontrino - 04/11/2025 13:26:55
+Cliente: Refosco Enrico
+Pane: rot-13 | Proteina: carne | Verdura: lattuga 
+Salse: ChaCha, Gnutella
+Aggiunte: Rsa, Cyber
+Totale: 8.32 €
+(Sconto Fidelity applicato)
+=====================
+
+=====================
+Scontrino - 04/11/2025 13:27:00
+Cliente: 
+Pane:  | Proteina:  | Verdura:  
+=====================
+Scontrino - 04/11/2025 13:27:18
+Cliente: Refosco Enrico
+Pane: aes | Proteina: carne | Verdura: lattuga 
+Salse: ChaCha
+Aggiunte: Vigenere
+Totale: 9.20 €
+=====================
+
+=====================
+Scontrino - 04/11/2025 13:27:20
+Cliente: Refosco Enrico
+Pane: aes | Proteina: carne | Verdura: lattuga 
+Salse: ChaCha
+Aggiunte: Vigenere
+Totale: 9.20 €
+=====================
+
+=====================
+Scontrino - 04/11/2025 13:27:20
+Cliente: Refosco Enrico
+Pane: aes | Proteina: carne | Verdura: lattuga 
+Salse: ChaCha
+Aggiunte: Vigenere
+Totale: 9.20 €
+=====================
+
