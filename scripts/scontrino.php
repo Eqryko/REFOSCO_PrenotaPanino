@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 // === DATI DELL'ORDINE ===
@@ -12,7 +13,6 @@ $salse = $_SESSION["salse"];
 $aggiunte = $_SESSION["aggiunte"];
 $prezzo = $_SESSION["prezzo"];
 $fidelity = isset($_SESSION["fidelity_ok"]) && $_SESSION["fidelity_ok"];
-
 $oggi = date("d/m/Y H:i:s");
 
 // === SCRITTURA SCONTRINO ===
@@ -28,17 +28,7 @@ if ($fidelity) fwrite($fp, "(Sconto Fidelity applicato)\n");
 fwrite($fp, "=====================\n\n");
 fclose($fp);
 
-
-// === CONTATORE DI VISUALIZZAZIONI BASATO SU COOKIE ===
-if (isset($_COOKIE["visualizzazioni"])) {
-    $count = (int)$_COOKIE["visualizzazioni"] + 1;
-} else {
-    $count = 1; // prima visita
-}
-
-// aggiorna il cookie (dura 1 anno)
-setcookie("visualizzazioni", $count, time() + (365 * 24 * 60 * 60), "/");
-
+// Connessione al DataBase
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -52,11 +42,48 @@ if ($conn->connect_error) {
 }
 
 // Seleziona il database
-if (!$conn->select_db("militari2punto0")) {
-    die("Impossibile selezionare il database: " . $conn->error);
+if (!$conn->select_db("paninaro")) {
+    die("<p style='color:red;'> Impossibile selezionare il database: " . $conn->error . "</p>");
 }
 
-echo "Database selezionato correttamente!";
+// Se è andato tutto bene
+echo "<p style='color:red; z-index:9999'> Database selezionato correttamente!</p>";
+
+
+// creare una tabella, uno script, eseguirlo
+
+$sql = "CREATE TABLE IF NOT EXISTS Ordini (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL,
+    pane VARCHAR(30) NOT NULL,
+    proteina VARCHAR(30) NOT NULL,
+    verdura VARCHAR(30) NOT NULL,
+    salse TEXT,
+    aggiunte TEXT,
+    prezzo DECIMAL(6,2) NOT NULL,
+    fidelity TINYINT(1) DEFAULT 0,
+    data_consegna DATE NOT NULL,
+    ora_consegna TIME NOT NULL,
+    data_ordine TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);";
+
+if ($conn->query($sql) === TRUE) {
+  echo "Table MyGuests created successfully";
+} else {
+  echo "Error creating table: " . $conn->error;
+}
+
+$conn->close();
+
+// === CONTATORE DI VISUALIZZAZIONI BASATO SU COOKIE ===
+if (isset($_COOKIE["visualizzazioni"])) {
+    $count = (int)$_COOKIE["visualizzazioni"] + 1;
+} else {
+    $count = 1; // prima visita
+}
+
+// aggiorna il cookie (dura 1 anno)
+setcookie("visualizzazioni", $count, time() + (365 * 24 * 60 * 60), "/");
 
 ?>
 
@@ -104,6 +131,7 @@ echo "Database selezionato correttamente!";
 
 
         <p>Visualizzazioni: </p><?= $count ?>
+        <p>connessione: </p>
     </div>
 </body>
 </html>

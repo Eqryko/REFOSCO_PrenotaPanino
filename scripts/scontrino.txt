@@ -266,3 +266,111 @@ Aggiunte: Vigenere
 Totale: 9.20 €
 =====================
 
+=====================
+Scontrino - 18/11/2025 12:20:49
+Cliente: Enrico
+Pane: rot-13 | Proteina: carne | Verdura: lattuga 
+Salse: 
+Aggiunte: 
+Totale: 8.00 €
+=====================
+
+=====================
+Scontrino - 18/11/2025 12:25:40
+Cliente: Enrico
+Pane: aes | Proteina: carne | Verdura: lattuga 
+Salse: Gnutella
+Aggiunte: Vigenere
+Totale: 9.20 €
+=====================
+
+=====================
+Scontrino - 18/11/2025 12:46:13
+Cliente: Enrico
+Pane: aes | Proteina: carne | Verdura: lattuga 
+Salse: Gnutella
+Aggiunte: Vigenere
+Totale: 9.20 €
+=====================
+
+=====================
+Scontrino - 18/11/2025 12:48:26
+Cliente: Enrico
+Pane: aes | Proteina: carne | Verdura: lattuga 
+Salse: Gnutella
+Aggiunte: Vigenere
+Totale: 9.20 €
+=====================
+
+=====================
+Scontrino - 18/11/2025 12:48:59
+Cliente: Enrico
+Pane: aes | Proteina: carne | Verdura: lattuga 
+Salse: Gnutella
+Aggiunte: Vigenere
+Totale: 9.20 €
+=====================
+
+=====================
+Scontrino - 18/11/2025 12:49:20
+Cliente: Enrico
+Pane: aes | Proteina: carne | Verdura: lattuga 
+Salse: Gnutella
+Aggiunte: Vigenere
+Totale: 9.20 €
+=====================
+
+=====================
+Scontrino - 18/11/2025 12:53:35
+Cliente: Enrico
+Pane: aes | Proteina: carne | Verdura: lattuga 
+Salse: Gnutella
+Aggiunte: Vigenere
+Totale: 9.20 €
+=====================
+
+=====================
+Scontrino - 18/11/2025 12:54:27
+Cliente: Enrico
+Pane: aes | Proteina: carne | Verdura: lattuga 
+Salse: Gnutella
+Aggiunte: Vigenere
+Totale: 9.20 €
+=====================
+
+=====================
+Scontrino - 18/11/2025 12:55:19
+Cliente: Enrico
+Pane: aes | Proteina: carne | Verdura: lattuga 
+Salse: Gnutella
+Aggiunte: Vigenere
+Totale: 9.20 €
+=====================
+
+=====================
+Scontrino - 18/11/2025 12:56:37
+Cliente: Enrico
+Pane: aes | Proteina: carne | Verdura: lattuga 
+Salse: Gnutella
+Aggiunte: Vigenere
+Totale: 9.20 €
+=====================
+
+=====================
+Scontrino - 18/11/2025 12:56:57
+Cliente: Enrico
+Pane: aes | Proteina: carne | Verdura: lattuga 
+Salse: Gnutella
+Aggiunte: Vigenere
+Totale: 9.20 €
+=====================
+
+=====================
+Scontrino - 18/11/2025 13:13:23
+Cliente: Enrico
+Pane: aes | Proteina: carne | Verdura: lattuga 
+Salse: Gnutella
+Aggiunte: Vigenere
+Totale: 9.20 €
+=====================
+
