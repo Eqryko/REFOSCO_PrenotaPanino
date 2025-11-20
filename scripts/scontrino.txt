@@ -374,3 +374,22 @@ Aggiunte: Vigenere
 Totale: 9.20 €
 =====================
 
+=====================
+Scontrino - 20/11/2025 13:04:01
+Cliente: Alex Munaro
+Pane: ipv4 | Proteina: mim | Verdura: rucola 
+Salse: ChaCha
+Aggiunte: Rsa
+Totale: 9.20 €
+=====================
+
+=====================
+Scontrino - 20/11/2025 13:24:35
+Cliente: Alex Munaro
+Pane: ipv4 | Proteina: mim | Verdura: rucola 
+Salse: ChaCha
+Aggiunte: Rsa
+Totale: 7.36 €
+(Sconto Fidelity applicato)
+=====================
+

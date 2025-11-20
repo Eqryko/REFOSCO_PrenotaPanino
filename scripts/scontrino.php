@@ -73,6 +73,37 @@ if ($conn->query($sql) === TRUE) {
   echo "Error creating table: " . $conn->error;
 }
 
+$sql = "CREATE TABLE IF NOT EXISTS Utente (
+    nome VARCHAR(50) PRIMARY KEY,
+    email VARCHAR(100),
+    telefono VARCHAR(20),
+    fidelity TINYINT(1) DEFAULT 0,
+    data_registrazione TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)";
+
+if ($conn->query($sql) === TRUE) {
+  echo "Table created successfully";
+} else {
+  echo "Error creating table: " . $conn->error;
+}
+
+// INSERT 1
+$sql = "INSERT INTO Utente (nome, email, telefono, fidelity)
+        VALUES ('Enrico Refosco', 'enricoorefosco@gmail.com', '3473044594', 1)";
+$conn->query($sql);
+
+// INSERT 2
+$sql = "INSERT INTO Utente (nome, email, telefono, fidelity)
+        VALUES ('Alex Munaro', 'alexmunaro22@gmail.com', '3923819874', 0)";
+$conn->query($sql);
+
+// INSERT 3
+$sql = "INSERT INTO Utente (nome, email, telefono, fidelity)
+        VALUES ('Edoardo Tozzi', 'edo.tozzi@example.com', '3391122334', 1)";
+$conn->query($sql);
+
+echo "Dati inseriti!";
+
 $conn->close();
 
 // === CONTATORE DI VISUALIZZAZIONI BASATO SU COOKIE ===
@@ -131,7 +162,6 @@ setcookie("visualizzazioni", $count, time() + (365 * 24 * 60 * 60), "/");
 
 
         <p>Visualizzazioni: </p><?= $count ?>
-        <p>connessione: </p>
     </div>
 </body>
 </html>
