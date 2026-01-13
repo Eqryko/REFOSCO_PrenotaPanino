@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $haFidelity = isset($_POST["haFidelity"]); // true se selezionato
 
     // Calcolo prezzo base
-    $prezzo = 8.00 + count($salse) * 0.5 + count($aggiunte) * 0.7;
+    $prezzo = 9.00 + count($salse) * 0.5 + count($aggiunte) * 0.7;
 
     // Salva tutto in sessione
     $_SESSION["nome"] = $nome;
